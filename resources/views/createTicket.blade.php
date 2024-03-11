@@ -79,14 +79,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="suriname">Suriname</label>
-                        <input type="text" class="form-control" id="suriName" name="suriName">
-
-                        @error('suriName')
-                            <div class="validate-error">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="departDate">Depart Date</label>
                         <input type="date" class="form-control" id="departDate" name="departDate">
 

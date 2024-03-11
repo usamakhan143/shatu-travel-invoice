@@ -22,7 +22,7 @@ class TicketController extends Controller
         $ticket->dOB = $request->dob;
         $ticket->departureLocation = $request->departureLocation;
         $ticket->destinationLocation = $request->destinationLocation;
-        $ticket->suriName = $request->suriName;
+        $ticket->suriName = 'NA';
         $ticket->date = $request->departDate;
         $ticket->departureTime = $request->departureTime;
         $ticket->status = 1;

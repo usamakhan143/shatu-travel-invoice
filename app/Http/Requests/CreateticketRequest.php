@@ -29,7 +29,6 @@ class CreateticketRequest extends FormRequest
             'dob' => 'required|date',
             'departureLocation' => 'required',
             'destinationLocation' => 'required',
-            'suriName' => 'required',
             'departDate' => 'required',
             'departureTime' => 'required'
         ];
@@ -43,7 +42,6 @@ class CreateticketRequest extends FormRequest
             'dob' => 'date of birth',
             'departureLocation' => 'departure location',
             'destinationLocation' => 'destination location',
-            'suriName' => 'suriname',
             'departDate' => 'departure date',
             'departureTime' => 'departure time'
         ];
