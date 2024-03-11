@@ -17,10 +17,21 @@
         color: red;
         font-size: 14px;
     }
+
+    /* Additional custom styling */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table th,
+    .table td {
+        vertical-align: middle;
+    }
 </style>
 
 <body>
 
+    @include('layouts.header')
 
     @section('content')
 

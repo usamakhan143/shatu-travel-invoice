@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateticketRequest;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
@@ -12,19 +13,8 @@ class TicketController extends Controller
         return view('createTicket');
     }
 
-    public function storeTicket(Request $request)
+    public function storeTicket(CreateticketRequest $request)
     {
-        $this->validate($request, [
-            'serialNumber' => 'required',
-            'fullName' => 'required',
-            'dob' => 'required|date',
-            'departureLocation' => 'required',
-            'destinationLocation' => 'required',
-            'suriName' => 'required',
-            'departDate' => 'required',
-            'departureTime' => 'required'
-        ]);
-
         $ticket = new Ticket();
 
         $ticket->serialNumber = $request->serialNumber;
@@ -42,5 +32,11 @@ class TicketController extends Controller
         if ($save) {
             return back()->with('success_msg', 'Ticket has been added successfully!');
         }
+    }
+
+    public function allTickets()
+    {
+        $tickets = Ticket::all();
+        return view('tickets', compact('tickets'));
     }
 }
