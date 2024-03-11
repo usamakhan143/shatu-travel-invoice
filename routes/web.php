@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ Route::get('/', [TicketController::class, 'createTicket'])->name('add.tickets');
 Route::post('/store-tickets', [TicketController::class, 'storeTicket'])->name('store.ticket');
 
 Route::get('/tickets', [TicketController::class, 'allTickets'])->name('all.tickets');
+Route::get('/pdf/{id}', [PdfController::class, 'generatePDF'])->name('generate.pdf');

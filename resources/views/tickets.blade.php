@@ -31,7 +31,7 @@
                             <td>{{ $ticket->suriName }}</td>
                             <td>{{ $ticket->date }}</td>
                             <td>{{ $ticket->departureTime }}</td>
-                            <td><a href="#" class="btn btn-danger">Get PDF</a></td>
+                            <td><a href="{{ route('generate.pdf', $ticket->id) }}" class="btn btn-danger">Get PDF</a></td>
                             {{-- <td>{{ $ticket->status ? 'Active' : 'Inactive' }}</td> --}}
                         </tr>
                     @endforeach
