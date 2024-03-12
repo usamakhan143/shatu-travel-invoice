@@ -20,17 +20,17 @@ class TicketController extends Controller
         $ticket->serialNumber = $request->serialNumber;
         $ticket->fullName = $request->fullName;
         $ticket->dOB = $request->dob;
-        $ticket->departureLocation = $request->departureLocation;
-        $ticket->destinationLocation = $request->destinationLocation;
+        $ticket->departureLocation = 'NA';
+        $ticket->destinationLocation = 'NA';
         $ticket->suriName = 'NA';
-        $ticket->date = $request->departDate;
-        $ticket->departureTime = $request->departureTime;
+        $ticket->date = 'NA';
+        $ticket->departureTime = 'NA';
         $ticket->status = 1;
 
         $save = $ticket->save();
 
         if ($save) {
-            return back()->with('success_msg', 'Ticket has been added successfully!');
+            return redirect()->route('show.ticket', $ticket->id)->with('success_msg', 'Ticket has been added successfully!');
         }
     }
 
@@ -38,5 +38,12 @@ class TicketController extends Controller
     {
         $tickets = Ticket::all();
         return view('tickets', compact('tickets'));
+    }
+
+
+    public function showTicket($id)
+    {
+        $data = Ticket::find($id);
+        return view('single-ticket', compact('data'));
     }
 }

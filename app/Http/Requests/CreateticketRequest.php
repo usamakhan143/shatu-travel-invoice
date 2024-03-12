@@ -26,11 +26,11 @@ class CreateticketRequest extends FormRequest
         return [
             'serialNumber' => 'required',
             'fullName' => 'required',
-            'dob' => 'required|date',
-            'departureLocation' => 'required',
-            'destinationLocation' => 'required',
-            'departDate' => 'required',
-            'departureTime' => 'required'
+            'dob' => 'required|date'
+            // 'departureLocation' => 'required',
+            // 'destinationLocation' => 'required',
+            // 'departDate' => 'required',
+            // 'departureTime' => 'required'
         ];
     }
 
@@ -39,11 +39,11 @@ class CreateticketRequest extends FormRequest
         return [
             'serialNumber' => 'serial number',
             'fullName' => 'full name',
-            'dob' => 'date of birth',
-            'departureLocation' => 'departure location',
-            'destinationLocation' => 'destination location',
-            'departDate' => 'departure date',
-            'departureTime' => 'departure time'
+            'dob' => 'date of birth'
+            // 'departureLocation' => 'departure location',
+            // 'destinationLocation' => 'destination location',
+            // 'departDate' => 'departure date',
+            // 'departureTime' => 'departure time'
         ];
     }
 }

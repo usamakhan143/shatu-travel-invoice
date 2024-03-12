@@ -20,3 +20,5 @@ Route::post('/store-tickets', [TicketController::class, 'storeTicket'])->name('s
 
 Route::get('/tickets', [TicketController::class, 'allTickets'])->name('all.tickets');
 Route::get('/pdf/{id}', [PdfController::class, 'generatePDF'])->name('generate.pdf');
+Route::get('/all-tickets', [PdfController::class, 'showTickets'])->name('show.allTickets');
+Route::get('/show-ticket/{id}', [TicketController::class, 'showTicket'])->name('show.ticket');

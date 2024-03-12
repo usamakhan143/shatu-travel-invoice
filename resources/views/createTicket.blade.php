@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="departureLocation">Departure Location</label>
@@ -93,7 +93,7 @@
                         @error('departureTime')
                             <div class="validate-error">{{ $message }}</div>
                         @enderror
-                    </div>
+                    </div> --}}
                     <button type="submit" class="btn btn-primary">Create Ticket</button>
                 </form>
             </div>
