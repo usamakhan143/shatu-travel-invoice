@@ -128,14 +128,15 @@
                     </div>
 
                     <div class="ticket-data-row">
+                        <p class="content-label">Return Date</p>
+                        <p class="content-value">25 May 2024</p>
+                    </div>
+
+                    <div class="ticket-data-row">
                         <p class="content-label">Serial Number</p>
                         <p class="content-value">{{ $data->serialNumber }}</p>
                     </div>
 
-                    <div class="ticket-data-row">
-                        <p class="content-label">Departure Time</p>
-                        <p class="content-value">21:00</p>
-                    </div>
                 </div>
                 <div class="ticket-data-col">
                     <div class="ticket-data-row">
